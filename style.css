@@ -180,7 +180,7 @@ a:hover{
     justify-content: space-between;
 }
 .home-img{
-    background-image: url(/img/retouch/VTN08494.jpeg);
+    background-image: url(img/retouch/VTN08469.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -194,14 +194,14 @@ a:hover{
     display: block;
     height: 110vh;
     width: 50vw;
-    background-position-x: -100px;
+    background-position-x: -110px;
 }
 @media (max-width:1000px){
     .container-out{
         flex-direction: column;
     }
     .home-img-sm{
-        display: block;
+        display:block;
     }
     #home-img-lg{
         display: none;
