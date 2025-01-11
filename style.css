@@ -364,7 +364,7 @@ a:hover{
 .hands{
     height: 100vh;
     width: 100%;
-    background-image: url(img/retouch2/VTN07999-2.jpg);
+    background-image: url(img/retouch2/VTN07999.jpg);
     background-size:cover;
     background-position-y: center;    
     background-position-x: center;
@@ -404,9 +404,10 @@ a:hover{
         margin: 2vh 0;
     }
     #parallax1{
-        width: auto;
+        /* width: 100%; */
+        scale: 50%;
         /* height: 50vh; */
-        /* background-size:contain; */
+        background-size:cover;
         background-position-y: center;    
         background-position-x: center;
         /* background-attachment: fixed; */
