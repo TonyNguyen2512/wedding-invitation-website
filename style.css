@@ -403,7 +403,7 @@ a:hover{
     .stay-item{
         margin: 2vh 0;
     }
-    .hands{
+    #parallax1{
         width: 100%;
         /* height: 50vh; */
         background-size:cover;
