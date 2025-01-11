@@ -327,8 +327,8 @@ a:hover{
         padding: 0;
     }
     .gallery-img{
-        height: auto; 
-        width: auto; 
+        width: 100vw;
+        height: 100vh;
         margin: 2px 0;
     }
     .gallery-img:nth-child(2){
@@ -393,6 +393,8 @@ a:hover{
     .stay-container{
         flex-direction: column;
         background-size: cover;
+        height: auto; 
+        width: auto; 
         margin: 10px 0;
     }
     .stay-item{
