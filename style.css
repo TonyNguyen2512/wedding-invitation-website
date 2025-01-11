@@ -362,11 +362,11 @@ a:hover{
 
 .hands{
     height: 100vh;
-    width: 100vw;
-    background-image: url(img/retouch2/VTN07999.jpg);
+    width: 100%;
+    background-image: url(img/retouch2/VTN07999-2.jpg);
     background-size:cover;
-    background-position-y: center;    
-    background-position-x: center;
+    /* background-position-y: center;    
+    background-position-x: center; */
     background-attachment: fixed;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -382,7 +382,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 20vh 0;
+    margin: 10vh 0;
 }
 .stay-item .text{
     margin: 20px 0;
@@ -395,8 +395,8 @@ a:hover{
     .stay-container{
         flex-direction: column;
         background-size: cover;
-        height: auto; 
-        width: auto; 
+        height: 100%; 
+        width: 100%; 
         margin: 10px 0;
     }
     .stay-item{
