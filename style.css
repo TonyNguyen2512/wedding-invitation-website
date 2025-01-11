@@ -362,7 +362,7 @@ a:hover{
 /* <===================HANDS===================> */
 
 .hands{
-    height: 50vh;
+    height: 100vh;
     width: 100%;
     background-image: url(img/retouch2/VTN07999.jpg);
     background-size:cover;
@@ -405,8 +405,12 @@ a:hover{
     }
     .hands{
         width: 100%;
-        height: 50vh;
-        background-position: center;
+        /* height: 50vh; */
+        background-size:cover;
+        background-position-y: center;    
+        background-position-x: center;
+        /* background-attachment: fixed; */
+        flex-direction: column;
     }
 }
 
