@@ -332,8 +332,8 @@ a:hover{
     background-position-x: top;
 }
 .gallery-img:nth-child(2){
-    background-position-y: top;
-    background-image: url(img/retouch2/VTN09596.jpg);
+    background-position-y: center;
+    background-image: url(img/retouch2/VTN09357.jpg);
 }
 .gallery-img:nth-child(3){
     background-image: url(img/retouch2/VTN09415.jpg);
