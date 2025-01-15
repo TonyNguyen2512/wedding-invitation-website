@@ -416,7 +416,7 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .stay-container {
     flex-direction: column;
     /* background-size: cover;
