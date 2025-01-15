@@ -255,6 +255,7 @@ a:hover {
 }
 .timeline-container .text {
   padding: 1rem 0 1rem 4rem;
+  line-height: 2rem;
 }
 @media (max-width: 1000px) {
   .timeline {
@@ -456,6 +457,7 @@ a:hover {
 .registry-container .text {
   text-align: justify;
   margin: 20px 0;
+  line-height: 2rem;
 }
 .registry-img {
   display: block;
