@@ -330,7 +330,7 @@ a:hover {
   background-position: center;
 }
 .gallery-img:nth-child(1) {
-  background-image: url(img/retouch2/VTN09434.jpg);
+  background-image: url(img/retouch2/VTN09607.jpg);
   background-position-x: top;
 }
 .gallery-img:nth-child(2) {
@@ -411,6 +411,7 @@ a:hover {
 }
 .stay-item .text {
   margin: 20px 0;
+  line-height: 2rem;
 }
 .links {
   cursor: pointer;
