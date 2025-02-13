@@ -73,25 +73,25 @@ const translations = {
     "contact-us": "Contact us"
   },
   vi: {
-    "nav-story": "CÂU CHUYỆN",
-    "nav-stay": "DI CHUYỂN & LƯU TRÚ",
+    "nav-story": "CHUYỆN TÌNH CHÚNG TÔI",
+    "nav-stay": "THÔNG TIN DI CHUYỂN",
     "nav-pictures": "HÌNH ẢNH CƯỚI",
-    "getting-married": "Chúng tôi sắp cưới",
-    "date-location": "Thứ bảy, ngày 22/02/2025\nTân Hưng, Long An",
-    "celebrating": "Chúng Tôi Tổ Chức Lễ Cưới\nCùng Những Người Thân Yêu",
-    "ceremony-title": "01. Lễ Cưới",
-    "ceremony-time": "Thứ bảy, ngày 22/02/2025\nLúc 7:00 sáng",
+    "getting-married": "Chúng tôi kết hôn",
+    "date-location": "Thứ bảy, ngày 22 tháng 02 năm 2025\nTân Hưng, Long An",
+    "celebrating": "Chia Sẻ Niềm Hạnh Phúc\nCùng Người Thân Yêu",
+    "ceremony-title": "01. Lễ Vu Quy",
+    "ceremony-time": "Thứ bảy, ngày 22 tháng 02 năm 2025\nVào lúc 7 giờ sáng",
     "reception-title": "02. Tiệc Cưới",
-    "reception-time": "Thứ bảy, ngày 22/02/2025\nLúc 9:00 sáng và 5:00 chiều",
-    "story-title": "Không Chỉ Là\nMột Câu Chuyện Tình Thường",
-    "story-text": "Đối với chúng tôi, tình yêu không phải là tình yêu sét đánh, mà là tình cảm được vun đắp theo thời gian khi chúng tôi hiểu nhau nhiều hơn.",
-    "travel-stay": "Di Chuyển & Lưu Trú",
-    "getting-there": "01. Đến Nơi",
-    "getting-there-text": "Tự lái xe hoặc xe máy đến Tân Hưng và khám phá vùng đất này, hoặc\n\nĐi xe đưa đón mà chúng tôi đã sắp xếp, khởi hành lúc 11 giờ sáng và đến nơi khoảng 2 giờ chiều.",
-    "map-details": "BẢN ĐỒ & CHI TIẾT",
-    "hope-see-you": "Hẹn Gặp Bạn!",
-    "more-pictures": "Nhấn vào đây để xem thêm hình ảnh cưới của chúng tôi",
-    "contact-us": "Liên hệ"
+    "reception-time": "Thứ bảy, ngày 22 tháng 02 năm 2025\nBuổi sáng: 9 giờ\nBuổi chiều: 5 giờ",
+    "story-title": "Câu Chuyện Tình Yêu\nCủa Chúng Tôi",
+    "story-text": "Tình yêu của chúng tôi không phải là tình yêu sét đánh, mà là tình cảm được vun đắp qua thời gian, khi chúng tôi dần hiểu nhau nhiều hơn.",
+    "travel-stay": "Thông Tin Di Chuyển",
+    "getting-there": "01. Phương Tiện Di Chuyển",
+    "getting-there-text": "Quý khách có thể tự di chuyển bằng xe máy hoặc ô tô đến Tân Hưng,\n\nHoặc đi chung xe đưa đón mà chúng tôi đã sắp xếp. Xe sẽ khởi hành lúc 11 giờ sáng và đến nơi khoảng 2 giờ chiều.",
+    "map-details": "XEM BẢN ĐỒ",
+    "hope-see-you": "Rất Mong Được Đón Tiếp!",
+    "more-pictures": "Xem thêm hình ảnh cưới của chúng tôi",
+    "contact-us": "Thông Tin Liên Hệ"
   },
   es: {
     "nav-story": "NUESTRA HISTORIA",
@@ -164,8 +164,33 @@ function cycleLanguage() {
   updateContent();
 }
 
-// Replace the existing initialization code with this:
+// Add this near the top of your main.js file
+function selectLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  
+  // Update content
+  updateContent();
+  
+  // Hide the prompt
+  document.getElementById('language-prompt').classList.add('hidden');
+}
+
+// Update your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
+  // Check if language was previously selected
+  const savedLanguage = localStorage.getItem('language');
+  
+  if (!savedLanguage) {
+    // Show language prompt if no language was previously selected
+    document.getElementById('language-prompt').classList.remove('hidden');
+  } else {
+    // Hide prompt if language was previously selected
+    document.getElementById('language-prompt').classList.add('hidden');
+    currentLanguage = savedLanguage;
+  }
+  
+  // Update the language switcher in navbar
   const currentLangEl = document.querySelector('.current-lang');
   const otherLangsEl = document.querySelector('.other-langs');
   
