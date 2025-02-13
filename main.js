@@ -71,16 +71,12 @@ const translations = {
     "hope-see-you": "Hope to See You!",
     "more-pictures": "Click here to watch more of our wedding pictures",
     "contact-us": "Contact us",
-    "contact-quyen": "Quyền: +84 911439756",
-    "contact-enric": "Enric: +84 93 8302704",
-    "timeline-title": "Wedding Timeline",
-    "gallery-title": "Our Gallery",
-    "rsvp-button": "RSVP",
-    "location-title": "Location",
-    "accommodation-title": "02. Accommodation",
-    "accommodation-text": "We've arranged special rates at nearby hotels. Please contact us for details.",
-    "transport-title": "03. Transportation",
-    "transport-text": "Shuttle service will be available from designated points."
+    "once-there": "Once You're There",
+    "floating-village": "1. Tan Lap Floating Village",
+    "national-park": "2. Tram Chim National Park",
+    "forest": "3. Xeo Quit Forest",
+    "quote": "To the world you are one person, but to one person you are the world",
+    "quote-author": "Anonymous"
   },
   vi: {
     "nav-story": "CHUYỆN TÌNH CHÚNG TÔI",
@@ -102,16 +98,12 @@ const translations = {
     "hope-see-you": "Rất Mong Được Đón Tiếp!",
     "more-pictures": "Xem thêm hình ảnh cưới của chúng tôi",
     "contact-us": "Thông Tin Liên Hệ",
-    "contact-quyen": "Quyền: +84 911439756",
-    "contact-enric": "Enric: +84 93 8302704",
-    "timeline-title": "Chương Trình Cưới",
-    "gallery-title": "Album Ảnh",
-    "rsvp-button": "Xác Nhận Tham Dự",
-    "location-title": "Địa Điểm",
-    "accommodation-title": "02. Nơi Lưu Trú",
-    "accommodation-text": "Chúng tôi đã đặt phòng với giá ưu đãi tại các khách sạn gần đó. Vui lòng liên hệ để biết thêm chi tiết.",
-    "transport-title": "03. Phương Tiện Di Chuyển",
-    "transport-text": "Xe đưa đón sẽ được bố trí tại các điểm được chỉ định."
+    "once-there": "Khi Đến Nơi",
+    "floating-village": "1. Làng Nổi Tân Lập",
+    "national-park": "2. Vườn Quốc Gia Tràm Chim",
+    "forest": "3. Rừng Xẻo Quýt",
+    "quote": "Với thế giới, bạn chỉ là một người, nhưng với một người, bạn là cả thế giới",
+    "quote-author": "Khuyết Danh"
   },
   es: {
     "nav-story": "NUESTRA HISTORIA",
@@ -133,16 +125,12 @@ const translations = {
     "hope-see-you": "¡Esperamos Verte!",
     "more-pictures": "Haz clic aquí para ver más fotos de nuestra boda",
     "contact-us": "Contáctanos",
-    "contact-quyen": "Quyền: +84 911439756",
-    "contact-enric": "Enric: +84 93 8302704",
-    "timeline-title": "Programa de la Boda",
-    "gallery-title": "Nuestra Galería",
-    "rsvp-button": "Confirmar Asistencia",
-    "location-title": "Ubicación",
-    "accommodation-title": "02. Alojamiento",
-    "accommodation-text": "Hemos conseguido tarifas especiales en hoteles cercanos. Por favor contáctenos para más detalles.",
-    "transport-title": "03. Transporte",
-    "transport-text": "Habrá servicio de transporte desde puntos designados."
+    "once-there": "Una Vez Allí",
+    "floating-village": "1. Pueblo Flotante de Tan Lap",
+    "national-park": "2. Parque Nacional Tram Chim",
+    "forest": "3. Bosque Xeo Quit",
+    "quote": "Para el mundo eres alguien, pero para alguien eres el mundo",
+    "quote-author": "Anónimo"
   }
 };
 
