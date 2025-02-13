@@ -24,7 +24,13 @@
         <li>
           <a href="#registry" onclick="myFunction()">MORE WEDDING PICTURES</a>
         </li>
-        <li id="google_translate_element"></li>
+        <li>
+          <button class="lang-switch" onclick="cycleLanguage()">
+            <span class="current-lang">EN</span>
+            <span class="separator">|</span>
+            <span class="other-langs">VI ES</span>
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -44,20 +50,20 @@
 
     <div class="home-img home-img-sm"></div>
     <div class="timeline hz-margin reveal">
-      <h2>
+      <h2 data-translate="celebrating">
         Celebrating Our Love <br />
         With Those We Love
       </h2>
       <div class="timeline-container">
         <div class="timeline-img"></div>
         <div class="timings">
-          <h3>01.&nbsp &nbsp Ceremony</h3>
-          <div class="text">
+          <h3 data-translate="ceremony-title">01. Ceremony</h3>
+          <div class="text" data-translate="ceremony-time">
             Saturday, Feb. 22, 2025 <br />
             At 7:00AM
           </div>
-          <h3>02.&nbsp &nbsp Reception</h3>
-          <div class="text">
+          <h3 data-translate="reception-title">02. Reception</h3>
+          <div class="text" data-translate="reception-time">
             Saturday, Feb. 22, 2025
             <br />
             At 9:00AM and 5:00PM
