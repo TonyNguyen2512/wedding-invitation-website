@@ -88,7 +88,6 @@ function switchLanguage() {
   document.querySelectorAll('[data-translate]').forEach(element => {
     const key = element.getAttribute('data-translate');
     if (translations[currentLang][key]) {
-      // Replace \n with <br> for HTML line breaks
       element.innerHTML = translations[currentLang][key].replace(/\n/g, '<br>');
     }
   });

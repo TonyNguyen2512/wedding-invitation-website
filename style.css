@@ -531,15 +531,14 @@ footer h2 {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--text-color);
-  font-family: var(--font-family);
+  color: #212121;
+  font-family: "Be Vietnam Pro";
   font-size: 17px;
   padding: 7px 13px;
   text-transform: uppercase;
-  transition: 0.5s;
 }
 
 .lang-switch:hover {
-  color: var(--orange-color);
+  color: orange;
   transition: 0.5s;
 }
