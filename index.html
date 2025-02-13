@@ -12,6 +12,17 @@
     <title>Wedding Invitation</title>
   </head>
   <body>
+    <div id="language-modal" class="modal">
+      <div class="modal-content">
+        <h2>Welcome • Xin chào • Bienvenidos</h2>
+        <div class="language-buttons">
+          <button onclick="selectLanguage('en')">Continue in English</button>
+          <button onclick="selectLanguage('vi')">Tiếp tục bằng Tiếng Việt</button>
+          <button onclick="selectLanguage('es')">Continuar en Español</button>
+        </div>
+      </div>
+    </div>
+
     <nav>
       <input type="checkbox" id="check" title="Menu Toggle" />
       <label for="check" class="checkbtn">
@@ -19,22 +30,19 @@
       </label>
       <label class="logo">Q & E</label>
       <ul class="text">
-        <li><a href="#story" onclick="myFunction()">OUR STORY</a></li>
-        <li><a href="#stay" onclick="myFunction()">TRAVEL & STAY</a></li>
-        <li>
-          <a href="#registry" onclick="myFunction()">MORE WEDDING PICTURES</a>
-        </li>
+        <li><a href="#story" onclick="myFunction()" data-translate="ourStory">OUR STORY</a></li>
+        <li><a href="#stay" onclick="myFunction()" data-translate="travelStay">TRAVEL & STAY</a></li>
+        <li><a href="#registry" onclick="myFunction()" data-translate="morePhotos">MORE WEDDING PICTURES</a></li>
         <li><button class="lang-switch" onclick="switchLanguage()">EN</button></li>
       </ul>
     </nav>
 
     <div class="home hz-margin">
-      <h3>We're getting married</h3>
+      <h3 data-translate="gettingMarried">We're getting married</h3>
       <h1>Quyền & Enric</h1>
       <div class="container-out">
         <div class="container-in text">
-          Saturday, Feb. 22, 2025 <br />
-          Tan Hung, Long An
+          <span data-translate="location">Tan Hung, Long An</span>
 
           <!-- <button class="huge-btn">RSVP</button> -->
         </div>
@@ -172,39 +180,14 @@
         </div> -->
 
         <footer>
-          <h2>Contact us</h2>
-          <!-- <h2>Quyền: +84 911439756</h2> -->
-          <h2>
-            <a
-              href="https://www.facebook.com/my.quyen.689452"
-              target="_blank"
-              rel="noopener"
-              >Quyền</a
-            >: +84 911439756
-          </h2>
-          <h2>Enric: +84 93 8302704</h2>
+          <h2 data-translate="contact">Contact us</h2>
+          <h2 data-translate="quyenPhone">Quyền: +84 911439756</h2>
+          <h2 data-translate="enricPhone">Enric: +84 93 8302704</h2>
           <!-- <div class="text">© 2023 for Aman and Gur. Made by <a href="https://twitter.com/NathArchak" class="text">@NathArchak</a></div> -->
         </footer>
       </div>
     </div>
 
     <script src="main.js"></script>
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement(
-          {
-            pageLanguage: "en",
-            includedLanguages: "en,vi,es",
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-          },
-          "google_translate_element"
-        );
-      }
-    </script>
-
-    <script
-      type="text/javascript"
-      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
   </body>
 </html>
