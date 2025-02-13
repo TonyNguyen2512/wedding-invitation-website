@@ -319,12 +319,13 @@ a:hover {
 /* Add these styles */
 .story-title {
   font-weight: 700;
-  line-height: 2.6rem;  /* Adjust this value to match storyText height */
+  line-height: 2.6rem;
   margin-bottom: 20px;
 }
 
 .story-text {
-  line-height: 1.8rem;
+  line-height: 2.5rem;
+  margin-top: 10px;
 }
 
 /* <===================GALLERY===================> */
@@ -421,6 +422,14 @@ a:hover {
   flex-direction: row;
   justify-content: space-around;
   margin: 10vh 0;
+  gap: 30px;
+}
+.stay-item {
+  flex: 0.8;
+  padding: 0 15px;
+}
+.stay-item:first-child {
+  flex: 1.2;
 }
 .stay-item .text {
   margin: 20px 0;
@@ -430,26 +439,15 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .stay-container {
     flex-direction: column;
-    /* background-size: cover;
-        height: 100%; 
-        width: 100%;  */
-    margin: 10px 0;
   }
-  .stay-item {
-    margin: 2vh 0;
-  }
-  #parallax1 {
-    /* width: 100%; */
-    scale: 100%;
-    /* height: 50vh; */
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;
-    background-attachment: fixed;
-    /* flex-direction: column; */
+  
+  .stay-item,
+  .stay-item:first-child {
+    flex: 1;
+    margin-bottom: 30px;
   }
 }
 
