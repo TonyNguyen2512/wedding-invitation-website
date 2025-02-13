@@ -527,15 +527,44 @@ footer h2 {
   font-weight: normal;
 }
 
+/* Remove Google Translate styles */
 .goog-te-gadget-simple {
-  border: none !important;
-  background: none !important;
+  display: none !important;
 }
 
 /* Language Switcher */
 .lang-switch {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: "Be Vietnam Pro";
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
   min-width: 120px;
   text-align: center;
+  line-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+  color: orange;
+}
+
+.lang-switch span {
+  font-family: "Be Vietnam Pro";
+}
+
+.current-lang {
+  color: #212121;
+  font-weight: 600;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #212121;
+  opacity: 0.5;
 }
 
 .other-langs {
@@ -546,7 +575,8 @@ footer h2 {
 /* Mobile adjustments */
 @media (max-width: 570px) {
   .lang-switch {
-    margin: 20px auto;
-    display: block;
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: normal;
   }
 }
