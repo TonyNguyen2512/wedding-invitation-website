@@ -47,8 +47,8 @@ for (var i = 0; i < reveals.length; i++) {
   
 window.addEventListener("scroll", reveal);
 
-// Language switching functionality
-let currentLanguage = localStorage.getItem('language') || 'en';
+// Language functionality
+let currentLanguage = 'en';
 
 const translations = {
   en: {
@@ -134,55 +134,15 @@ const translations = {
   }
 };
 
-function toggleLanguage() {
-  const currentLangEl = document.querySelector('.current-lang');
-  const otherLangEl = document.querySelector('.other-lang');
-  
-  // Toggle language
-  currentLanguage = currentLanguage === 'en' ? 'vi' : 'en';
-  
-  // Update button text
-  currentLangEl.textContent = currentLanguage.toUpperCase();
-  otherLangEl.textContent = currentLanguage === 'en' ? 'VI' : 'EN';
-  
-  // Save preference
-  localStorage.setItem('language', currentLanguage);
-  
-  // Update all translations
-  updateContent();
-}
-
 function updateContent() {
   document.querySelectorAll('[data-translate]').forEach(element => {
     const key = element.getAttribute('data-translate');
     if (translations[currentLanguage][key]) {
-      element.textContent = translations[currentLanguage][key];
+      element.innerHTML = translations[currentLanguage][key];
     }
   });
 }
 
-function cycleLanguage() {
-  const languages = ['en', 'vi', 'es'];
-  const currentIndex = languages.indexOf(currentLanguage);
-  const nextIndex = (currentIndex + 1) % languages.length;
-  currentLanguage = languages[nextIndex];
-  
-  // Update button text
-  const currentLangEl = document.querySelector('.current-lang');
-  const otherLangsEl = document.querySelector('.other-langs');
-  
-  currentLangEl.textContent = currentLanguage.toUpperCase();
-  
-  // Show other available languages
-  const otherLangs = languages.filter(lang => lang !== currentLanguage);
-  otherLangsEl.textContent = otherLangs.map(lang => lang.toUpperCase()).join(' ');
-  
-  // Save preference and update content
-  localStorage.setItem('language', currentLanguage);
-  updateContent();
-}
-
-// Add these functions at the top of your main.js
 function selectLanguage(lang) {
   currentLanguage = lang;
   localStorage.setItem('language', lang);
@@ -200,7 +160,26 @@ function selectLanguage(lang) {
   updateContent();
 }
 
-// Update your DOMContentLoaded event listener
+function cycleLanguage() {
+  const langs = ['en', 'vi', 'es'];
+  const currentIndex = langs.indexOf(currentLanguage);
+  const nextIndex = (currentIndex + 1) % langs.length;
+  selectLanguage(langs[nextIndex]);
+  
+  // Update the language switcher display
+  const currentLangEl = document.querySelector('.current-lang');
+  const otherLangsEl = document.querySelector('.other-langs');
+  
+  currentLangEl.textContent = currentLanguage.toUpperCase();
+  const otherLangs = langs.filter(lang => lang !== currentLanguage);
+  otherLangsEl.textContent = otherLangs.map(lang => lang.toUpperCase()).join(' ');
+}
+
+// Original JavaScript functionality
+function myFunction() {
+  document.getElementById("check").checked = false;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const savedLanguage = localStorage.getItem('language');
   
@@ -229,3 +208,22 @@ document.addEventListener('DOMContentLoaded', () => {
   
   updateContent();
 });
+
+// Reveal animations
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}

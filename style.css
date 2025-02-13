@@ -2,7 +2,7 @@
 
 /*@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand&display=swap');*/
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 /* <===================CSS VARIABLES===================> */
@@ -23,7 +23,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: var(--primary-font);
+  font-family: "Be Vietnam Pro";
   color: #212121;
 }
 html {
@@ -90,20 +90,22 @@ h3 {
 /* <===================NAVBAR===================> */
 
 nav {
-  height: 3vh;
+  background: white;
+  height: 80px;
   width: 100%;
-  margin-bottom: 20vh;
+  position: fixed;
+  z-index: 100;
 }
-label.logo {
+.logo {
+  color: #212121;
   font-size: 35px;
   line-height: 80px;
-  padding: 0 0 0 30px;
+  padding: 0 100px;
   font-weight: bold;
 }
 nav ul {
   float: right;
   margin-right: 20px;
-  list-style: none;
 }
 nav ul li {
   display: inline-block;
@@ -111,13 +113,12 @@ nav ul li {
   margin: 0 5px;
 }
 nav ul li a {
-  font-family: "Be Vietnam Pro";
+  color: #212121;
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: 600;
 }
 a:hover {
   color: orange;
@@ -135,7 +136,7 @@ a:hover {
   display: none;
 }
 @media (max-width: 1000px) {
-  label.logo {
+  .logo {
     font-size: 20px;
   }
   nav ul li a {
@@ -540,7 +541,7 @@ footer h2 {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-family: var(--primary-font);
+  font-family: "Be Vietnam Pro";
   font-size: 17px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -549,32 +550,20 @@ footer h2 {
   text-align: center;
   line-height: 80px;
   transition: all 0.3s ease;
-  font-weight: 600;
 }
 
 .lang-switch:hover {
   color: orange;
 }
 
-.lang-switch span {
-  font-family: "Be Vietnam Pro";
-}
-
 .current-lang {
   color: #212121;
-  font-weight: 700;
-}
-
-.separator {
-  margin: 0 5px;
-  color: #212121;
-  opacity: 0.5;
+  font-weight: bold;
 }
 
 .other-langs {
   color: #212121;
   opacity: 0.5;
-  font-weight: 600;
 }
 
 /* Mobile adjustments */
@@ -586,7 +575,7 @@ footer h2 {
   }
 }
 
-/* Simplified Language Selector */
+/* Language Prompt */
 .language-prompt {
   position: fixed;
   top: 0;
@@ -617,7 +606,7 @@ footer h2 {
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: var(--primary-font);
+  font-family: "Be Vietnam Pro";
 }
 
 .language-buttons button:hover {

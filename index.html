@@ -26,7 +26,7 @@
     </style>
   </head>
   <body class="no-scroll">
-    <!-- Simplified Language Selection Modal -->
+    <!-- Language Selection Modal -->
     <div id="language-prompt" class="language-prompt">
       <div class="language-prompt-content">
         <div class="language-buttons">
@@ -37,9 +37,7 @@
       </div>
     </div>
 
-    <!-- Main Content -->
     <div id="main-content">
-      <!-- Navigation -->
       <nav>
         <input type="checkbox" id="check" title="Menu Toggle" />
         <label for="check" class="checkbtn">
@@ -49,7 +47,9 @@
         <ul class="text">
           <li><a href="#story" onclick="myFunction()" data-translate="nav-story">OUR STORY</a></li>
           <li><a href="#stay" onclick="myFunction()" data-translate="nav-stay">TRAVEL & STAY</a></li>
-          <li><a href="#gallery" onclick="myFunction()" data-translate="nav-pictures">MORE WEDDING PICTURES</a></li>
+          <li>
+            <a href="#registry" onclick="myFunction()" data-translate="nav-pictures">MORE WEDDING PICTURES</a>
+          </li>
           <li>
             <button class="lang-switch" onclick="cycleLanguage()">
               <span class="current-lang">EN</span>
@@ -60,73 +60,70 @@
         </ul>
       </nav>
 
-      <!-- Hero Section -->
-      <section class="home hz-margin">
+      <div class="home hz-margin">
         <h3 data-translate="getting-married">We're getting married</h3>
         <h1>Quyền & Enric</h1>
         <div class="container-out">
           <div class="container-in text" data-translate="date-location">
-            Saturday, Feb. 22, 2025
+            Saturday, Feb. 22, 2025 <br />
             Tan Hung, Long An
           </div>
           <div class="home-img" id="home-img-lg"></div>
         </div>
-      </section>
+      </div>
 
-      <!-- Wedding Timeline -->
-      <section class="timeline hz-margin reveal">
-        <h2 data-translate="celebrating">Celebrating Our Love With Those We Love</h2>
+      <div class="home-img home-img-sm"></div>
+
+      <div class="timeline hz-margin reveal">
+        <h2 data-translate="celebrating">
+          Celebrating Our Love <br />
+          With Those We Love
+        </h2>
         <div class="timeline-container">
-          <div class="timeline-img" id="parallax1"></div>
+          <div class="timeline-img"></div>
           <div class="timings">
             <h3 data-translate="ceremony-title">01. Ceremony</h3>
             <div class="text" data-translate="ceremony-time">
-              Saturday, Feb. 22, 2025
+              Saturday, Feb. 22, 2025 <br />
               At 7:00AM
             </div>
             <h3 data-translate="reception-title">02. Reception</h3>
             <div class="text" data-translate="reception-time">
-              Saturday, Feb. 22, 2025
+              Saturday, Feb. 22, 2025 <br />
               At 9:00AM and 5:00PM
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Our Story -->
-      <section id="story" class="story hz-margin reveal">
-        <h2 data-translate="story-title">Not Just an Ordinary Love Story</h2>
+      <div id="story" class="story hz-margin reveal">
+        <h2 data-translate="story-title">
+          Not Just an<br />
+          Ordinary Love Story
+        </h2>
         <div class="text" data-translate="story-text">
-          For us, love doesn't happen instantly at first sight, but develops gradually as we get to know each other better over a period of time.
+          For us, love doesn't happen instantly at first sight, but develops
+          gradually as we get to know each other better over a period of time.
         </div>
-      </section>
+      </div>
 
-      <!-- Travel & Stay Information -->
-      <section id="stay" class="stay hz-margin reveal">
+      <div id="stay" class="stay hz-margin reveal">
         <h2 data-translate="travel-stay">Travel and Stay</h2>
         <div class="timeline-container">
           <div class="timings">
             <h3 data-translate="getting-there">01. Getting There</h3>
             <div class="text" data-translate="getting-there-text">
               Driving or biking to Tan Hung and explore the area on your own, or
-              Taking a van we've arranged, which will leave the city at 11AM and arrive around 2PM.
-            </div>
-            <h3 data-translate="accommodation-title">02. Accommodation</h3>
-            <div class="text" data-translate="accommodation-text">
-              We've arranged special rates at nearby hotels. Please contact us for details.
-            </div>
-            <h3 data-translate="transport-title">03. Transportation</h3>
-            <div class="text" data-translate="transport-text">
-              Shuttle service will be available from designated points.
+              <br /><br />
+              Taking a van we've arranged, which will leave the city at 11AM and
+              arrive around 2PM.
             </div>
             <button class="huge-btn" data-translate="map-details">MAP & DETAILS</button>
           </div>
         </div>
-      </section>
+      </div>
 
-      <!-- Gallery -->
-      <section id="gallery" class="gallery hz-margin reveal">
-        <h2 data-translate="gallery-title">Our Gallery</h2>
+      <div id="registry" class="registry hz-margin reveal">
         <div class="gallery-container">
           <div class="gallery-img"></div>
           <div class="gallery-img"></div>
@@ -134,11 +131,11 @@
         </div>
 
         <div class="quote reveal">
-          <h1>
+          <h1 data-translate="quote">
             "To the world you are one person, but to one person you are the
             world".
           </h1>
-          <div class="author text">Anonymous</div>
+          <div class="author text" data-translate="quote-author">Anonymous</div>
         </div>
 
         <div class="hands" id="parallax1"></div>
@@ -146,11 +143,11 @@
         <div id="stay">
           <div class="stay-container reveal">
             <div class="stay-item">
-              <h3>Once You're There</h3>
+              <h3 data-translate="once-there">Once You're There</h3>
               <div class="text">
-                <a href="https://vt.tiktok.com/ZSM8gybbY/" target="_blank">1. Tan Lap Floating Village</a><br /><br />
-                <a href="https://vt.tiktok.com/ZSM8g5Ntw/" target="_blank">2. Tram Chim National Park</a><br /><br />
-                <a href="https://vt.tiktok.com/ZSM8gQVKD/" target="_blank">3. Xeo Quit Forest</a>
+                <a href="https://vt.tiktok.com/ZSM8gybbY/" target="_blank" data-translate="floating-village">1. Tan Lap Floating Village</a><br /><br />
+                <a href="https://vt.tiktok.com/ZSM8g5Ntw/" target="_blank" data-translate="national-park">2. Tram Chim National Park</a><br /><br />
+                <a href="https://vt.tiktok.com/ZSM8gQVKD/" target="_blank" data-translate="forest">3. Xeo Quit Forest</a>
               </div>
             </div>
           </div>
@@ -160,15 +157,14 @@
         <button class="huge-btn" data-translate="more-pictures" onclick="window.location.href='https://drive.google.com/drive/folders/11XUxo6u2ttUPYnLjoK6Hxi56y3gMW-xZ?usp=sharing'">
           Click here to watch more of our wedding pictures
         </button>
-      </section>
+      </div>
 
-      <!-- Footer -->
       <footer>
         <h2 data-translate="contact-us">Contact us</h2>
         <h2>
-          <a href="https://www.facebook.com/my.quyen.689452" target="_blank" rel="noopener">Quyền</a>: +84 911439756
+          <a href="https://www.facebook.com/my.quyen.689452" target="_blank">Quyền</a>: +84 911439756
         </h2>
-        <h2 data-translate="contact-enric">Enric: +84 93 8302704</h2>
+        <h2>Enric: +84 93 8302704</h2>
       </footer>
     </div>
 
