@@ -316,6 +316,17 @@ a:hover {
   }
 }
 
+/* Add these styles */
+.story-title {
+  font-weight: 700;
+  line-height: 2.6rem;  /* Adjust this value to match storyText height */
+  margin-bottom: 20px;
+}
+
+.story-text {
+  line-height: 1.8rem;
+}
+
 /* <===================GALLERY===================> */
 
 .gallery {
