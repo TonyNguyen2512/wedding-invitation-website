@@ -531,3 +531,46 @@ footer h2 {
   border: none !important;
   background: none !important;
 }
+
+/* Language Switcher */
+.lang-switch {
+  background: transparent;
+  border: 1px solid #212121;
+  border-radius: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-family: "Be Vietnam Pro";
+  transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+  background: rgba(33, 33, 33, 0.05);
+}
+
+.lang-switch span {
+  font-size: 14px;
+}
+
+.current-lang {
+  color: #212121;
+  font-weight: 600;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #212121;
+  opacity: 0.5;
+}
+
+.other-lang {
+  color: #212121;
+  opacity: 0.5;
+}
+
+/* Mobile adjustments */
+@media (max-width: 570px) {
+  .lang-switch {
+    margin: 20px auto;
+    display: block;
+  }
+}
