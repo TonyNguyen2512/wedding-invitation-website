@@ -25,10 +25,10 @@
       }
     </style>
   </head>
-  <body class="no-scroll">
-    <!-- Language Selection Modal -->
+  <body>
     <div id="language-prompt" class="language-prompt">
       <div class="language-prompt-content">
+        <h2>Choose Your Language / Chọn Ngôn Ngữ / Elige tu Idioma</h2>
         <div class="language-buttons">
           <button onclick="selectLanguage('en')">English</button>
           <button onclick="selectLanguage('vi')">Tiếng Việt</button>
@@ -37,28 +37,27 @@
       </div>
     </div>
 
-    <div id="main-content">
-      <nav>
-        <input type="checkbox" id="check" title="Menu Toggle" />
-        <label for="check" class="checkbtn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Q & E</label>
-        <ul class="text">
-          <li><a href="#story" onclick="myFunction()" data-translate="nav-story">OUR STORY</a></li>
-          <li><a href="#stay" onclick="myFunction()" data-translate="nav-stay">TRAVEL & STAY</a></li>
-          <li>
-            <a href="#registry" onclick="myFunction()" data-translate="nav-pictures">MORE WEDDING PICTURES</a>
-          </li>
-          <li>
-            <button class="lang-switch" onclick="cycleLanguage()">
-              <span class="current-lang">EN</span>
-              <span class="separator">|</span>
-              <span class="other-langs">VI ES</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
+    <nav>
+      <input type="checkbox" id="check" title="Menu Toggle" />
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Q & E</label>
+      <ul class="text">
+        <li><a href="#story" onclick="myFunction()" data-translate="nav-story">OUR STORY</a></li>
+        <li><a href="#stay" onclick="myFunction()" data-translate="nav-stay">TRAVEL & STAY</a></li>
+        <li>
+          <a href="#registry" onclick="myFunction()" data-translate="nav-pictures">MORE WEDDING PICTURES</a>
+        </li>
+        <li>
+          <button class="lang-switch" onclick="cycleLanguage()">
+            <span class="current-lang">EN</span>
+            <span class="separator">|</span>
+            <span class="other-langs">VI ES</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
 
       <div class="home hz-margin">
         <h3 data-translate="getting-married">We're getting married</h3>

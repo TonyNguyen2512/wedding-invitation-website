@@ -91,19 +91,13 @@ const translations = {
     "reception-time": "Thứ bảy, ngày 22 tháng 02 năm 2025\nBuổi sáng: 9 giờ\nBuổi chiều: 5 giờ",
     "story-title": "Câu Chuyện Tình Yêu\nCủa Chúng Tôi",
     "story-text": "Tình yêu của chúng tôi không phải là tình yêu sét đánh, mà là tình cảm được vun đắp qua thời gian, khi chúng tôi dần hiểu nhau nhiều hơn.",
-    "travel-stay": "Thông Tin Di Chuyển & Lưu Trú",
+    "travel-stay": "Thông Tin Di Chuyển",
     "getting-there": "01. Phương Tiện Di Chuyển",
     "getting-there-text": "Quý khách có thể tự di chuyển bằng xe máy hoặc ô tô đến Tân Hưng,\n\nHoặc đi chung xe đưa đón mà chúng tôi đã sắp xếp. Xe sẽ khởi hành lúc 11 giờ sáng và đến nơi khoảng 2 giờ chiều.",
-    "map-details": "XEM BẢN ĐỒ & CHI TIẾT",
+    "map-details": "XEM BẢN ĐỒ",
     "hope-see-you": "Rất Mong Được Đón Tiếp!",
     "more-pictures": "Xem thêm hình ảnh cưới của chúng tôi",
-    "contact-us": "Thông Tin Liên Hệ",
-    "once-there": "Khi Đến Nơi",
-    "floating-village": "1. Làng Nổi Tân Lập",
-    "national-park": "2. Vườn Quốc Gia Tràm Chim",
-    "forest": "3. Rừng Xẻo Quýt",
-    "quote": "Với thế giới, bạn chỉ là một người, nhưng với một người, bạn là cả thế giới",
-    "quote-author": "Khuyết Danh"
+    "contact-us": "Thông Tin Liên Hệ"
   },
   es: {
     "nav-story": "NUESTRA HISTORIA",
@@ -180,20 +174,30 @@ function myFunction() {
   document.getElementById("check").checked = false;
 }
 
+// Add this near the top of your main.js file
+function selectLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  
+  // Update content
+  updateContent();
+  
+  // Hide the prompt
+  document.getElementById('language-prompt').classList.add('hidden');
+}
+
+// Update your DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
+  // Check if language was previously selected
   const savedLanguage = localStorage.getItem('language');
   
-  if (savedLanguage) {
-    // If language was previously selected
-    currentLanguage = savedLanguage;
-    document.getElementById('language-prompt').style.display = 'none';
-    document.getElementById('main-content').classList.add('visible');
-    document.body.classList.remove('no-scroll');
+  if (!savedLanguage) {
+    // Show language prompt if no language was previously selected
+    document.getElementById('language-prompt').classList.remove('hidden');
   } else {
-    // If no language was selected, keep the prompt visible
-    document.getElementById('language-prompt').style.display = 'flex';
-    document.getElementById('main-content').classList.remove('visible');
-    document.body.classList.add('no-scroll');
+    // Hide prompt if language was previously selected
+    document.getElementById('language-prompt').classList.add('hidden');
+    currentLanguage = savedLanguage;
   }
   
   // Update the language switcher in navbar
